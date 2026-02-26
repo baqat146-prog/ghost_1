@@ -249,7 +249,7 @@ echo                                                      Private Developer: SBT
         set "LinkFile=C:\Ghost Optimizer\GitHub.url"
         (
         echo [InternetShortcut]
-        echo URL=https://github.com/louzkk/Ghost-Optimizer
+        echo https://www.youtube.com/watch?v=FTu_ndnh-wc
         ) > "%LinkFile%"
 
         chcp 437 >> "%ghost-logfile%" 2>&1
@@ -4369,5 +4369,6 @@ echo                                                      Private Developer: SBT
     timeout /t 1 /nobreak >> "%ghost-logfile%" 2>&1
     echo.
     goto ghost
+
 
 
