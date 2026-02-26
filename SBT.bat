@@ -242,15 +242,15 @@ echo                                                      Private Developer: SBT
         set "t=%t: =0%"
         set "ghost-logfile=C:\Ghost Optimizer\Logs\%d%_%t%.log"
         echo Ghost Optimizer > "%ghost-logfile%"
-        echo Created by louzkk >> "%ghost-logfile%" 2>&1
+        echo Created by sbt >> "%ghost-logfile%" 2>&1
         echo. >> "%ghost-logfile%" 2>&1
 
-    :: Setting Url
-        set "LinkFile=C:\Ghost Optimizer\GitHub.url"
-        (
-        echo [InternetShortcut]
-        echo https://www.youtube.com/watch?v=FTu_ndnh-wc
-        ) > "%LinkFile%"
+   :: Setting Url
+set "LinkFile=C:\Ghost Optimizer\GitHub.url"
+(
+echo [InternetShortcut]
+echo URL=https://www.youtube.com/watch?v=FTu_ndnh-wc
+) > "%LinkFile%"
 
         chcp 437 >> "%ghost-logfile%" 2>&1
 
@@ -4369,6 +4369,7 @@ echo                                                      Private Developer: SBT
     timeout /t 1 /nobreak >> "%ghost-logfile%" 2>&1
     echo.
     goto ghost
+
 
 
 
