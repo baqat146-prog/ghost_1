@@ -226,7 +226,13 @@ echo                                                      Private Developer: SBT
         )
         echo !textGradient!!esc![0m
     )
-
+ :: Creating Folders
+        if not exist "C:\Ghost Optimizer" md "C:\Ghost Optimizer"
+        if not exist "C:\Ghost Optimizer\Logs" md "C:\Ghost Optimizer\Logs"
+        if not exist "C:\Ghost Optimizer\NVIDIA" md "C:\Ghost Optimizer\NVIDIA"
+        if not exist "C:\Ghost Optimizer\OOSU10" md "C:\Ghost Optimizer\OOSU10"
+        if not exist "C:\Ghost Optimizer\GhostX" md "C:\Ghost Optimizer\GhostX"
+        
     
 
     :: Setting Logs
@@ -4363,4 +4369,5 @@ echo                                                      Private Developer: SBT
     timeout /t 1 /nobreak >> "%ghost-logfile%" 2>&1
     echo.
     goto ghost
+
 
