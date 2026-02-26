@@ -4360,10 +4360,7 @@ echo                                                      Private Developer: SBT
     echo                                                    %purple%[ %roxo%%underline%B%reset% %purple%]%white% Back to menu 
     set /p answer="%reset% >:%roxo%"
 
-    if "%answer%"=="1" start https://github.com/louzkk && goto ghost
-    if "%answer%"=="2" start https://github.com/louzkk/Ghost-Optimizer && goto ghost
-    if "%answer%"=="b" call :menu
-    if "%answer%"=="B" call :menu
+    
 
     :: Invalid Input
     echo.
