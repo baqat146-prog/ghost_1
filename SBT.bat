@@ -232,6 +232,7 @@ echo                                                      Private Developer: SBT
         if not exist "C:\Ghost Optimizer\NVIDIA" md "C:\Ghost Optimizer\NVIDIA"
         if not exist "C:\Ghost Optimizer\OOSU10" md "C:\Ghost Optimizer\OOSU10"
         if not exist "C:\Ghost Optimizer\GhostX" md "C:\Ghost Optimizer\GhostX"
+        if not exist "C:\Ghost Optimizer\GhostAHK" md "C:\Ghost Optimizer\GhostAHK"
         
     
 
@@ -4369,6 +4370,7 @@ echo URL=https://www.youtube.com/watch?v=FTu_ndnh-wc
     timeout /t 1 /nobreak >> "%ghost-logfile%" 2>&1
     echo.
     goto ghost
+
 
 
 
