@@ -43,7 +43,7 @@
     set "rebooing=Rebooting"
     set "shuttingdown=Shutting Down"
     set "downloading=Downloading"
-    set "sbt=@sbt"
+    set "louzkk=@louzkk"
     title %script% %version%
 
 :: Colors & Gradient
@@ -137,7 +137,7 @@
         set "lineGradient=!lineGradient!!esc![38;2;!colorR!;!colorG!;!colorB!m─"
     )
     for /L %%k in (1,1,!BeforeSpace!) do set "lineGradient=!lineGradient! "
-    echo !lineGradient!!esc![0m
+      echo !lineGradient!!esc![0m
  echo.                                                 is a private optimization tool 
 echo.
 echo                                                      Private Developer: SBT
@@ -226,15 +226,14 @@ echo                                                      Private Developer: SBT
         )
         echo !textGradient!!esc![0m
     )
- :: Creating Folders
+
+    :: Creating Folders
         if not exist "C:\Ghost Optimizer" md "C:\Ghost Optimizer"
         if not exist "C:\Ghost Optimizer\Logs" md "C:\Ghost Optimizer\Logs"
         if not exist "C:\Ghost Optimizer\NVIDIA" md "C:\Ghost Optimizer\NVIDIA"
         if not exist "C:\Ghost Optimizer\OOSU10" md "C:\Ghost Optimizer\OOSU10"
         if not exist "C:\Ghost Optimizer\GhostX" md "C:\Ghost Optimizer\GhostX"
         if not exist "C:\Ghost Optimizer\GhostAHK" md "C:\Ghost Optimizer\GhostAHK"
-        
-    
 
     :: Setting Logs
         set "d=%date:/=-%"
@@ -243,15 +242,15 @@ echo                                                      Private Developer: SBT
         set "t=%t: =0%"
         set "ghost-logfile=C:\Ghost Optimizer\Logs\%d%_%t%.log"
         echo Ghost Optimizer > "%ghost-logfile%"
-        echo Created by sbt >> "%ghost-logfile%" 2>&1
+        echo Created by louzkk >> "%ghost-logfile%" 2>&1
         echo. >> "%ghost-logfile%" 2>&1
 
-   :: Setting Url
-set "LinkFile=C:\Ghost Optimizer\GitHub.url"
-(
-echo [InternetShortcut]
-echo URL=https://www.youtube.com/watch?v=FTu_ndnh-wc
-) > "%LinkFile%"
+    :: Setting Url
+        set "LinkFile=C:\Ghost Optimizer\GitHub.url"
+        (
+        echo [InternetShortcut]
+        echo URL=https://www.youtube.com/watch?v=FTu_ndnh-wc
+        ) > "%LinkFile%"
 
         chcp 437 >> "%ghost-logfile%" 2>&1
 
@@ -348,7 +347,8 @@ echo URL=https://www.youtube.com/watch?v=FTu_ndnh-wc
     echo              %purple%[ %roxo%%underline%7%reset% %purple%]%white% Windows Cleaner              %purple%[ %roxo%%underline%8%reset% %purple%]%white% Telemetry ^& Logging             %purple%[ %roxo%%underline%9%reset% %purple%]%white% Unnecessary Services
     echo.
     echo              %purple%[ %roxo%%underline%10%reset% %purple%]%white% GhostX Powerplan            %purple%[ %roxo%%underline%11%reset% %purple%]%white% Integrity ^& Health             %purple%[ %roxo%%underline%12%reset% %purple%]%white% Uninstall Bloatware                        
-    echo              %purple%[ %roxo%%underline%13%reset% %purple%]%white% Windows Speed                       
+    echo.
+    echo.
     set /p answer="%white% >:%roxo%"
 
     :: Options
@@ -393,6 +393,24 @@ echo URL=https://www.youtube.com/watch?v=FTu_ndnh-wc
     if "%answer%"=="Socd" goto socd
     if "%answer%"=="Logs" start "" "C:\Ghost Optimizer\Logs" && goto menu
 
+    if "%answer%"=="Louzkk" goto ghost
+    if "%answer%"=="louzkk" goto ghost
+    if "%answer%"=="@louzkk" goto ghost
+    if "%answer%"=="@Louzkk" goto ghost
+    if "%answer%"=="LOUZKK" goto ghost
+    if "%answer%"=="@LOUZKK" goto ghost
+    if "%answer%"=="ghost" goto ghost
+    if "%answer%"=="Ghost" goto ghost
+    if "%answer%"=="GHOST" goto ghost
+    if "%answer%"=="github" goto ghost
+    if "%answer%"=="Github" goto ghost
+    if "%answer%"=="help" goto ghost
+    if "%answer%"=="Help" goto ghost
+    if "%answer%"=="HELP" goto ghost
+    if "%answer%"=="About" goto ghost
+    if "%answer%"=="about" goto ghost
+    if "%answer%"=="ABOUT" goto ghost
+    if "%answer%"=="?" goto ghost
 
     :: Invalid Input
     echo.
@@ -4361,7 +4379,6 @@ echo URL=https://www.youtube.com/watch?v=FTu_ndnh-wc
     echo                                                    %purple%[ %roxo%%underline%B%reset% %purple%]%white% Back to menu 
     set /p answer="%reset% >:%roxo%"
 
-    
 
     :: Invalid Input
     echo.
@@ -4370,8 +4387,3 @@ echo URL=https://www.youtube.com/watch?v=FTu_ndnh-wc
     timeout /t 1 /nobreak >> "%ghost-logfile%" 2>&1
     echo.
     goto ghost
-
-
-
-
-
